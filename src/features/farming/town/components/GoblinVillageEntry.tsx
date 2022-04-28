@@ -5,10 +5,10 @@ import { GRID_WIDTH_PX } from "features/game/lib/constants";
 import goblinCarry from "assets/npcs/goblin_carry.gif";
 import goblinSign from "assets/buildings/goblin_sign.png";
 import arrowRight from "assets/icons/arrow_right.png";
-import { GoblinTownModal } from "./GoblinTownModal";
+import { GoblinVillageModal } from "./GoblinVillageModal";
 import { Modal } from "react-bootstrap";
 
-export const GoblinTownEntry: React.FC = () => {
+export const GoblinVillageEntry: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -23,23 +23,25 @@ export const GoblinTownEntry: React.FC = () => {
     >
       <img
         src={goblinCarry}
-        className="running"
+        className="running hover:img-highlight cursor-pointer"
         style={{
           width: `${GRID_WIDTH_PX * 1}px`,
           right: `${GRID_WIDTH_PX * 2}px`,
         }}
+        onClick={() => setShowModal(true)}
       />
       <img
         src={goblinSign}
-        className="absolute"
+        className="absolute hover:img-highlight cursor-pointer"
         style={{
           width: `${GRID_WIDTH_PX * 1.5}px`,
           right: `${GRID_WIDTH_PX * 2}px`,
         }}
+        onClick={() => setShowModal(true)}
       />
       <img
         src={arrowRight}
-        className="absolute pointing"
+        className="absolute pointing "
         style={{
           width: `${GRID_WIDTH_PX * 0.7}px`,
           right: `${GRID_WIDTH_PX * 1.4}px`,
@@ -48,7 +50,7 @@ export const GoblinTownEntry: React.FC = () => {
       />
 
       <Modal centered show={showModal} onHide={() => setShowModal(false)}>
-        <GoblinTownModal />
+        <GoblinVillageModal />
       </Modal>
     </div>
   );
