@@ -17,7 +17,6 @@ import { Decorations } from "./components/Decorations";
 import { Minting } from "./components/Minting";
 import { Success } from "./components/Success";
 import { Syncing } from "./components/Syncing";
-import { Withdrawing } from "./components/Withdrawing";
 import { Blacklisted } from "./components/Blacklisted";
 
 import { Quarry } from "features/farming/quarry/Quarry";
@@ -29,12 +28,10 @@ import { Town } from "features/farming/town/Town";
 import { ErrorCode } from "lib/errors";
 import { ErrorMessage } from "features/auth/ErrorMessage";
 import { House } from "features/farming/house/House";
-import { Tailor } from "features/goblins/tailor/Tailor";
 import { Lore } from "./components/Lore";
 import { ClockIssue } from "./components/ClockIssue";
 import { TooManyRequests } from "features/auth/components/TooManyRequests";
 import { screenTracker } from "lib/utils/screen";
-import { Withdrawn } from "./components/Withdrawn";
 import { Resetting } from "features/auth/components/Resetting";
 
 const AUTO_SAVE_INTERVAL = 1000 * 30; // autosave every 30 seconds
@@ -108,7 +105,6 @@ export const Game: React.FC = () => {
           {gameState.matches("blacklisted") && <Blacklisted />}
           {gameState.matches("synced") && <Success />}
           {gameState.matches("syncing") && <Syncing />}
-          {/* {gameState.matches("withdrawn") && <Withdrawn />} */}
         </Panel>
       </Modal>
 
