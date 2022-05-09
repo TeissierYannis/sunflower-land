@@ -18,7 +18,6 @@ import { getFingerPrint } from "./botDetection";
 import { SkillName } from "../types/skills";
 import { levelUp } from "../actions/levelUp";
 import { reset } from "features/farming/hud/actions/reset";
-
 import { AchievementName } from "features/game/types/achievements";
 import { unlockAchievement } from "features/game/actions/unlockAchievement";
 import { CONFIG } from "lib/config";

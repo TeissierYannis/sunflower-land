@@ -218,6 +218,7 @@ export const INITIAL_FARM: GameState = {
     Scarecrow: new Decimal(4),
     "Roasted Cauliflower": new Decimal(1),
     Sauerkraut: new Decimal(1),
+    "Iron Pickaxe": new Decimal(1),
   },
   stock: INITIAL_STOCK,
   trees: INITIAL_TREES,

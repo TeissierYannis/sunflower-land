@@ -1,5 +1,6 @@
 import Decimal from "decimal.js-light";
 import { GameState, Inventory, InventoryItemName, Tree } from "../types/game";
+import { updateProgression } from "features/game/types/progress";
 
 export enum CHOP_ERRORS {
   MISSING_AXE = "No axe",
@@ -87,6 +88,11 @@ export function chop({
   }
 
   const woodAmount = state.inventory.Wood || new Decimal(0);
+
+  /**
+   * Update progression for achievement
+   */
+  updateProgression("Wood", woodAmount.toNumber());
 
   return {
     ...state,
