@@ -21,6 +21,7 @@ import { ErrorCode } from "lib/errors";
 import { TeamDonation } from "./teamDonation/TeamDonation";
 import { House } from "features/farming/house/House";
 import { Blacklisted } from "./Blacklisted";
+import { Alguaculture } from "features/farming/alguaculture/Alguaculture";
 
 const SHOW_MODAL: Record<StateValues, boolean> = {
   loading: true,
@@ -58,6 +59,7 @@ export const ReadOnlyGame: React.FC = () => {
       <Lore />
       <Town />
       <House state={gameState.context.state} />
+      <Alguaculture />
     </>
   );
 };
